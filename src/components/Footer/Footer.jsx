@@ -1,42 +1,46 @@
 import React from "react";
 import cruznegra from "../../assets/CruzNegra.svg";
+import Formulario from "./Formulario";
 const Footer = () => {
   return (
     <footer id="contact" className="z-50">
       <div className="w-full px-4 py-4 md:pt-5 " id="footer">
         <div className="max-w-full mx-auto grid grid-cols-1 md:grid-cols-2 gap-4 justify-center items-center">
           {/* Primer Div */}
-          <div className="p-4 rounded-lg shadow-md">
+          <div className="p-4 ">
             <p className="text-white font-bold text-xl md:text-3xl mb-0 md:mb-4">
               Let's talk about the impact you’d like to make and blow your
               audience's collective mind.
             </p>
+            <div className="pt-5 md:pt-0 rounded-lg shadow-md flex flex-col justify-between">
+              <div>
+                <ul className="space-y-10">
+                  <li>
+                    <a
+                      href="mailto:contact@cruznegra.com"
+                      className="text-white underline"
+                    >
+                      contact@cruznegra.com
+                    </a>
+                  </li>
+                  <li>
+                    <a href="tel:+15550000000" className="text-white underline">
+                      +1 (555) 000-0000
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#link3" className="text-white underline">
+                      123 Sample St, Posadas (Misiones) ARG
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
           </div>
 
           {/* Segundo Div */}
-          <div className="p-4 rounded-lg shadow-md flex flex-col justify-between">
-            <div>
-              <ul className="space-y-5 md:space-y-10">
-                <li>
-                  <a
-                    href="mailto:contact@cruznegra.com"
-                    className="text-white underline"
-                  >
-                    contact@cruznegra.com
-                  </a>
-                </li>
-                <li>
-                  <a href="tel:+15550000000" className="text-white underline">
-                    +1 (555) 000-0000
-                  </a>
-                </li>
-                <li>
-                  <a href="#link3" className="text-white underline">
-                    123 Sample St, Posadas (Misiones) ARG
-                  </a>
-                </li>
-              </ul>
-            </div>
+          <div className="flex items-center justify-center h-auto md:min-h-screen">
+            <Formulario />
           </div>
         </div>
 
