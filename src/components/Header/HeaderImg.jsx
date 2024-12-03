@@ -8,11 +8,11 @@ const HeaderImg = () => {
       {/* Contenedor de logos */}
       <div className="absolute inset-0 flex justify-center items-center flex-col p-3">
         <div className="w-full md:w-10/12 justify-center ">
-          <div className="flex justify-center  items-center ">
+          <div className="flex justify-center items-center ">
             <img
               src={logo1}
               alt="Logo 1"
-              className="w-10 h-10 md:w-28 md:h-28 mr-2 md:mr-10" // Logo 1 responsivo
+              className="w-10 h-10 md:w-28 md:h-28 mr-2 md:mr-10"
             />
             <img
               src={logo2}
@@ -20,9 +20,8 @@ const HeaderImg = () => {
               className="w-8/12 " // Logo 2 responsivo
             />
           </div>
-          <div className=" p-0 md:p-1 justify-center flex items-center">
-            <p className="text-white text-end font-normal uppercase text-sm md:text-2xl w-full md:w-10/12 pr-5 md:p-0 ">
-              {/* Aquí usamos el componente Typed para la animación */}
+          <div className=" p-0  justify-center flex items-center">
+            <p className="text-white text-end font-normal uppercase text-sm md:text-2xl w-full md:w-10/12 pr-6 md:p-0 ">
               <ReactTyped
                 strings={["Think. Code. Evolve."]} // Las frases que cambiarán
                 typeSpeed={100} // Velocidad al escribir

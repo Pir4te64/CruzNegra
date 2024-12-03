@@ -88,7 +88,7 @@ const WorksRight = () => {
 
         {/* Contenedor de información */}
         <motion.div
-          className="w-1/2 absolute md:bottom-10 md:-left-40 boxProjecto1 bg-black bg-opacity-70 text-white p-0 md:p-4 rounded-lg backdrop-blur-sm px-4 border-t border-l border-r border-neutral_lighter rounded-t-lg"
+          className="w-1/2 absolute md:bottom-10 md:-left-40 boxProjecto1 bg-black bg-opacity-70 text-white p-0 md:p-4  backdrop-blur-sm px-4 border-t border-l border-r border-neutral_lighter rounded-t-lg"
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"

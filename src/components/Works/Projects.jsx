@@ -28,7 +28,7 @@ const Projects = () => {
   };
 
   return (
-    <div id="project">
+    <div id="project" className="pt-10 md:pt-0">
       {/* Proyectos iniciales */}
       <div>
         <motion.div

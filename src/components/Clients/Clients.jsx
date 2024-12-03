@@ -23,7 +23,8 @@ const Clients = () => {
 
   return (
     <div className="relative w-full h-[1268px] md:h-[649px] my-20 flex flex-col items-center justify-center">
-      {/* Contenedor de la Imagen */}
+      <div className="absolute -top-5 left-0 blurryface  text-white h-20 z-50 w-full rounded-t-lg"></div>
+
       <img
         src={clientsImage}
         alt="Clientes"
@@ -103,6 +104,7 @@ const Clients = () => {
           </section>
         </div>
       </div>
+      <div className="absolute -bottom-5 left-0 blurryface-down  text-white h-20 z-50 w-full rounded-t-lg"></div>
     </div>
   );
 };

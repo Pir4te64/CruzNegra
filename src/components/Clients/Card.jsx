@@ -1,9 +1,7 @@
-import React from "react";
-
 const TestimonialCard = ({ name, title, comment, image, rating }) => {
   const stars = Array(rating).fill("★");
   return (
-    <div className="flex flex-col justify-between flex-1 lg:py-8 lg:px-7 bg-opacity-70 text-white p-6 md:p-4 px-8 md:px-6 rounded-lg backdrop-blur-md border-t border-l border-r transition-all border-neutral_lighter rounded-t-lg">
+    <div className="flex flex-col justify-between flex-1 lg:py-8 lg:px-7 bg-opacity-70 text-white p-6 md:p-4 px-8 md:px-6 rounded-t-lg backdrop-blur-md border-t border-l border-r transition-all border-neutral_lighter rounded-t-lg">
       <div className="flex-1">
         <div className="flex items-center">
           {/* Renderizamos las estrellas basadas en la puntuación */}
