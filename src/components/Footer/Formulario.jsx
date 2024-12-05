@@ -9,10 +9,10 @@ const Formulario = () => {
     setIsLoading(true);
     emailjs
       .sendForm(
-        "service_mtpki9s", // Reemplaza con tu Service ID.
-        "template_bevfi3o", // Reemplaza con tu Template ID.
+        "service_v6bwvss", // Reemplaza con tu Service ID.
+        "template_hlbkd5b", // Reemplaza con tu Template ID.
         formRef.current, // Referencia al formulario.
-        "BdciU1Hs5WonAbFnE" // Reemplaza con tu User ID.
+        "OnFxjh96VY04mSzI3" // Reemplaza con tu User ID.
       )
       .then(
         (result) => {
