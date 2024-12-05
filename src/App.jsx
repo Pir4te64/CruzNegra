@@ -37,7 +37,7 @@ function App() {
       <Navbar />
       <SectionUs />
       <ServicesSection />
-      <Projects />
+      {/* <Projects /> */}
       <SectionBellow />
       <ContacSection />
       <Clients />
