@@ -20,12 +20,15 @@ const Footer = () => {
                       href="mailto:contact@cruznegra.com"
                       className="text-white underline"
                     >
-                      contact@cruznegra.com
+                      management@cruznegradev.com
                     </a>
                   </li>
                   <li>
-                    <a href="tel:+15550000000" className="text-white underline">
-                      +1 (555) 000-0000
+                    <a
+                      href="tel:+54 376 4825153"
+                      className="text-white underline"
+                    >
+                      +54 376 4825153
                     </a>
                   </li>
                   <li>
