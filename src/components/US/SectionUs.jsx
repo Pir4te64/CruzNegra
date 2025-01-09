@@ -70,7 +70,9 @@ const SectionUs = () => {
             animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
             transition={{ duration: 0.8, delay: 0.4 }}
           >
-            <motion.button
+            <motion.a
+              type="button"
+              href="#form"
               className="bg-white text-black_cruznegra px-4 py-2 text-sm rounded-md border-2 border-transparent hover:bg-transparent hover:text-white hover:border-white transition-all"
               whileHover={{
                 scale: 1.1,
@@ -81,7 +83,7 @@ const SectionUs = () => {
               }}
             >
               Let's Talk
-            </motion.button>
+            </motion.a>
           </motion.div>
         </div>
       </div>

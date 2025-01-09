@@ -27,12 +27,16 @@ const ContacSection = () => {
         <h1 className="text-xl md:text-4xl font-bold mb-0 md:mb-6">
           You deserve the success
         </h1>
-        <p className="text-md md:text-xl my-1 md:mb-8">
-          let us help you achieve it
+        <p className="text-md md:text-xl my-1 mb-5 md:mb-8">
+          Let us help you achieve it.
         </p>
-        <button className="bg-white text-black_cruznegra px-2 py-1 md:px-4 mt-4 md:py-2 text-md rounded-md border-2 border-transparent hover:bg-transparent hover:text-white hover:border-white transition-all">
+        <a
+          href="#form"
+          type="button"
+          className="bg-white text-black_cruznegra px-6 py-3 text-sm rounded-md border-2 border-transparent hover:bg-transparent hover:text-white hover:border-white transition-all"
+        >
           Let's Talk
-        </button>
+        </a>
       </motion.div>
     </div>
   );

@@ -1,29 +1,39 @@
-import React, { useRef, useState } from "react";
+import { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
+import Swal from "sweetalert2";
 
 const Formulario = () => {
   const formRef = useRef();
   const [isLoading, setIsLoading] = useState(false);
+
   const handleSubmit = (e) => {
     e.preventDefault(); // Evitar el comportamiento predeterminado del formulario.
     setIsLoading(true);
     emailjs
       .sendForm(
-        "service_v6bwvss", // Reemplaza con tu Service ID.
-        "template_hlbkd5b", // Reemplaza con tu Template ID.
+        "service_1h4ufum", // Reemplaza con tu Service ID.
+        "template_ofzslmc", // Reemplaza con tu Template ID.
         formRef.current, // Referencia al formulario.
         "OnFxjh96VY04mSzI3" // Reemplaza con tu User ID.
       )
       .then(
         (result) => {
-          alert("¡Email Sended!");
+          Swal.fire({
+            icon: "success",
+            title: "¡Email enviado!",
+            text: "Tu mensaje se ha enviado correctamente.",
+            confirmButtonText: "OK",
+          });
           formRef.current.reset(); // Limpia el formulario después del envío.
         },
         (error) => {
           console.error("Error al enviar el correo:", error);
-          alert(
-            "Hubo un error al enviar el correo. Por favor, inténtalo de nuevo."
-          );
+          Swal.fire({
+            icon: "error",
+            title: "Error",
+            text: "Hubo un problema al enviar tu mensaje. Por favor, inténtalo de nuevo.",
+            confirmButtonText: "Cerrar",
+          });
         }
       )
       .finally(() => setIsLoading(false));
@@ -31,9 +41,10 @@ const Formulario = () => {
 
   return (
     <form
+      id="form"
       ref={formRef}
       onSubmit={handleSubmit}
-      className="w-full max-w-lg p-2 md:p-6  text-white"
+      className="w-full max-w-lg p-2 md:p-6 text-white"
     >
       <div className="mb-4">
         <label htmlFor="name" className="block text-sm font-medium mb-2">
@@ -72,19 +83,20 @@ const Formulario = () => {
           rows="4"
           placeholder="Type your Message"
           required
+          maxLength={200}
         ></textarea>
       </div>
 
       <button
         type="submit"
-        className={`w-1/4 px-4 py-2 font-medium rounded-lg ${
+        className={`md:w-1/4 w-full px-4 py-2 font-medium rounded-lg ${
           isLoading
             ? "bg-gray-500 cursor-not-allowed"
-            : "bg-white text-black_cruznegra hover:bg-black_cruznegra hover:text-white hover:border focus:ring-2 focus:ring-blue-500 focus:outline-none"
+            : "bg-white text-black_cruznegra hover:bg-black_cruznegra hover:text-white  focus:ring-2 focus:ring-blue-500 focus:outline-none"
         }`}
         disabled={isLoading}
       >
-        {isLoading ? "Sending..." : "Submit"}
+        {isLoading ? "Sending, wait..." : "Submit"}
       </button>
     </form>
   );

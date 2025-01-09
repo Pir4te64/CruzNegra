@@ -40,7 +40,7 @@ function App() {
       {/* <Projects /> */}
       <SectionBellow />
       <ContacSection />
-      <Clients />
+      {/* <Clients /> */}
       <Footer />
       <ScrollToTopButton />
     </SmoothScroll>

@@ -23,31 +23,14 @@ const Footer = () => {
                       management@cruznegradev.com
                     </a>
                   </li>
-                  <li>
-                    <a
-                      href="tel:+54 376 4825153"
-                      className="text-white underline"
-                    >
-                      +54 376 4825153
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#link3" className="text-white underline">
-                      123 Sample St, Posadas (Misiones) ARG
-                    </a>
-                  </li>
                 </ul>
               </div>
             </div>
           </div>
-
-          {/* Segundo Div */}
           <div className="flex items-center justify-center h-auto md:min-h-screen">
             <Formulario />
           </div>
         </div>
-
-        {/* Nueva Sección */}
         <div className="mt-10 w-full h-[150px] md:h-[329px] flex flex-col">
           {/* Contenido superior: Logo y Links */}
           <div className="flex flex-row items-center justify-between  h-full px-4">
@@ -59,10 +42,9 @@ const Footer = () => {
                 className="h-10 w-auto"
               />
             </a>
-            {/* Links */}
-            <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-6">
+            <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-6 text-right md:text-left">
               <a
-                href="https://instagram.com"
+                href="https://www.instagram.com/cruznegra.dev/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-white underline"
@@ -82,7 +64,7 @@ const Footer = () => {
 
           {/* Línea divisoria y texto */}
           <div className="border-t border-white py-4">
-            <p className="text-center text-white text-sm">
+            <p className="text-center text-white md:text-xl text-sm">
               © 2024 CruzNegra. All rights reserved.
             </p>
           </div>

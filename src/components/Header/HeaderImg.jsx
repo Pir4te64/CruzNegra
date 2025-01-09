@@ -21,7 +21,7 @@ const HeaderImg = () => {
             />
           </div>
           <div className=" p-0  justify-center flex items-center">
-            <p className="text-white text-end font-normal uppercase text-sm md:text-2xl w-full md:w-10/12 pr-6 md:p-0 ">
+            <p className="text-white text-end font-normal uppercase text-sm md:text-2xl w-full md:w-10/12 pr-8  md:p-0 md:pr-5">
               <ReactTyped
                 strings={["Think. Code. Evolve."]} // Las frases que cambiarán
                 typeSpeed={100} // Velocidad al escribir

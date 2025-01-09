@@ -7,9 +7,13 @@ const HeaderText = () => {
       </h1>
       <div className="text-center lg:text-left items-center lg:items-start flex justify-center lg:justify-start mt-4">
         {/* Contenedor para alinear el botón */}
-        <button className="bg-white text-black_cruznegra px-4 py-2 text-sm rounded-md border-2 border-transparent hover:bg-transparent hover:text-white hover:border-white transition-all">
+        <a
+          href="#form"
+          type="button"
+          className="bg-white text-black_cruznegra px-4 py-2 text-sm rounded-md border-2 border-transparent hover:bg-transparent hover:text-white hover:border-white transition-all"
+        >
           Let's Talk
-        </button>
+        </a>
       </div>
     </div>
   );
