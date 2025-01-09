@@ -1,0 +1,62 @@
+name: Deploy to pro Branch
+
+on:
+  push:
+    branches:
+      - main  # Ejecuta el workflow solo cuando hay un push en la rama main.
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      # 1. Clonar el repositorio
+      - name: Checkout repository
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0  # Asegura que se pueda trabajar con múltiples ramas.
+
+      # 2. Instalar dependencias y construir el proyecto
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'  # Ajusta según la versión de Node.js necesaria.
+      - name: Install dependencies and build
+        run: |
+          npm ci
+          npm run build
+
+      # 3. Crear o limpiar la rama "pro"
+      - name: Prepare pro branch
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+          # Elimina la rama "pro" si ya existe
+          if git rev-parse --verify origin/pro > /dev/null 2>&1; then
+            git push origin --delete pro
+          fi
+
+          # Crea la nueva rama "pro" basada en main
+          git checkout -b pro
+
+      # 4. Limpiar todo excepto `dist`
+      - name: Clean branch and copy dist content
+        run: |
+          # Elimina todos los archivos rastreados por Git
+          git rm -rf . || true
+          
+          # Copia el contenido de dist a la raíz
+          cp -r dist/* .
+          
+          # Elimina dist y node_modules
+          rm -rf dist node_modules
+
+          # Agrega y confirma los cambios
+          git add .
+          git commit -m "Deploy pro from main"
+
+      # 5. Empujar los cambios a la rama "pro"
+      - name: Push to pro branch
+        run: |
+          git push origin pro --force
