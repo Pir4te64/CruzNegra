@@ -1,5 +1,0 @@
-# Ignorar todo por defecto
-*
-
-# Excluir la carpeta dist
-!dist/
