@@ -8,7 +8,7 @@ const SectionUs = () => {
   return (
     <div className="w-full px-4 py-10" ref={sectionRef}>
       <div
-        className="max-w-full mx-0 md:mx-10 grid grid-cols-1 md:grid-cols-2 gap-4"
+        className="max-w-full mx-0 md:mx-16 grid grid-cols-1 md:grid-cols-2 gap-6"
         data-scroll-section
         data-scroll-call="section"
         id="about"

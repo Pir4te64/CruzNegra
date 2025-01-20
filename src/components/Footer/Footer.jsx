@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <footer id="contact" className="z-50">
       <div className="w-full px-4 py-4 md:pt-5 " id="footer">
-        <div className="max-w-full mx-auto grid grid-cols-1 md:grid-cols-2 gap-4 justify-center items-center">
+        <div className="max-w-full md:mx-16 grid grid-cols-1 md:grid-cols-2 gap-4 justify-center items-center">
           {/* Primer Div */}
           <div className="p-4 ">
             <p className="text-white font-bold text-xl md:text-3xl mb-0 md:mb-4">
@@ -31,11 +31,11 @@ const Footer = () => {
             <Formulario />
           </div>
         </div>
-        <div className="mt-10 w-full h-[150px] md:h-[329px] flex flex-col">
+        <div className="mt-10  w-full h-[150px] md:h-[329px] flex flex-col">
           {/* Contenido superior: Logo y Links */}
-          <div className="flex flex-row items-center justify-between  h-full px-4">
+          <div className="flex flex-row items-center justify-between md:mx-16  h-full px-4">
             {/* Logo */}
-            <a href="#" className="mb-4">
+            <a href="/" className="mb-4">
               <img
                 src={cruznegra} // Reemplaza con la ruta de tu logo
                 alt="CruzNegra Logo"
