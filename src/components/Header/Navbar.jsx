@@ -12,9 +12,9 @@ const Navbar = () => {
     >
       {/* Main Container */}
       <div className="lg:flex lg:items-center lg:justify-between flex flex-col h-screen lg:h-auto justify-between items-center ">
-        <div className="w-full mb-4">
+        <div className="w-full mb-4 ">
           {/* Contenedor de navbar y texto con botón */}
-          <div className="flex items-center w-full ">
+          <div className="flex items-center w-full px-0 md:px-10 ">
             {/* Logo y menú desplegable en pantallas grandes */}
             <LogoComponent
               onMouseEnter={() => setMenuVisible(true)}
