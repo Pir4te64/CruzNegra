@@ -7,7 +7,7 @@ const ServicesSection = () => {
     <>
       <div className=" relative w-full px-0 md:px-4 py-10 custom-background">
         <div className="absolute -top-5 left-0 blurryface  text-white h-20 z-50 w-full rounded-t-lg"></div>
-        <div className="mx-auto grid grid-cols-1 sm:grid-cols-2 gap-6 ">
+        <div className="md:mx-10 grid grid-cols-1 sm:grid-cols-2 gap-6 ">
           {services.map((service, index) => (
             <ServiceCard
               key={index}

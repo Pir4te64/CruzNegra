@@ -8,7 +8,7 @@ const SectionUs = () => {
   return (
     <div className="w-full px-4 py-10" ref={sectionRef}>
       <div
-        className="max-w-full mx-auto grid grid-cols-1 md:grid-cols-2 gap-4"
+        className="max-w-full mx-0 md:mx-10 grid grid-cols-1 md:grid-cols-2 gap-4"
         data-scroll-section
         data-scroll-call="section"
         id="about"
@@ -23,7 +23,7 @@ const SectionUs = () => {
           >
             Our philosophy is built on three core pillars: perfection, exclusive
             design, and custom development. We strive to create solutions that
-            meet and exceed our clients' expectations.
+            meet and exceed our clients&apos; expectations.
           </motion.p>
           <motion.div
             className="flex flex-wrap gap-4"

@@ -7,7 +7,7 @@ const HeaderImg = () => {
     <div className="relative w-full h-[540px]">
       {/* Contenedor de logos */}
       <div className="absolute inset-0 flex justify-center items-center flex-col p-3">
-        <div className="w-full md:w-10/12 justify-center ">
+        <div className="w-full md:w-8/12 justify-center ">
           <div className="flex justify-center items-center ">
             <img
               src={logo1}

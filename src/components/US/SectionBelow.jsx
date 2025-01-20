@@ -13,7 +13,7 @@ const SectionBellow = () => {
 
   return (
     <div className="w-full px-4 py-8 md:pt-5" id="">
-      <div className="max-w-full mx-auto grid grid-cols-1 md:grid-cols-2 gap-4">
+      <div className="max-w-full md:mx-10 grid grid-cols-1 md:grid-cols-2 gap-4">
         {/* Primer Div */}
         <motion.div
           className="p-4 rounded-lg shadow-md"
