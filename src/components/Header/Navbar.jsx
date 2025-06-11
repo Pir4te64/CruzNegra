@@ -42,21 +42,24 @@ const Navbar = () => {
       <div className="hidden lg:block absolute top-8 right-12 z-30">
         <HeaderText />
       </div>
-      {/* Mobile: Logo arriba, texto y CTA en columna */}
-      <div className="flex flex-col items-center justify-center h-full w-full relative z-10 lg:hidden">
+      {/* Mobile y Desktop: Logo grande y texto centrados */}
+      <div className="flex flex-col items-center justify-center h-full w-full relative z-10">
         <div className="w-full flex flex-col items-center">
           <HeaderImg />
-          <h1 className="text-md font-normal mt-6 mb-2 leading-5 text-center px-4">
-            {t("header_text")}
-          </h1>
-          <div className="w-full flex justify-center">
-            <a
-              href="#form"
-              type="button"
-              className="bg-white text-black_cruznegra px-4 py-2 text-lg rounded-md border-2 border-transparent hover:bg-transparent hover:text-white hover:border-white transition-all font-semibold shadow-md"
-            >
-              {t("lets_talk")}
-            </a>
+          {/* Solo en mobile: texto principal y CTA */}
+          <div className="lg:hidden w-full flex flex-col items-center">
+            <h1 className="text-md font-normal mt-6 mb-2 leading-5 text-center px-4">
+              {t("header_text")}
+            </h1>
+            <div className="w-full flex justify-center">
+              <a
+                href="#form"
+                type="button"
+                className="bg-white text-black_cruznegra px-4 py-2 text-lg rounded-md border-2 border-transparent hover:bg-transparent hover:text-white hover:border-white transition-all font-semibold shadow-md"
+              >
+                {t("lets_talk")}
+              </a>
+            </div>
           </div>
         </div>
       </div>
