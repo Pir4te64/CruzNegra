@@ -1,6 +1,5 @@
 import logo1 from "../../assets/CruzNegra.svg";
 import logo2 from "../../assets/Logo.svg";
-import { ReactTyped } from "react-typed"; // Importamos la librería react-typed
 
 const HeaderImg = () => {
   return (
@@ -11,10 +10,10 @@ const HeaderImg = () => {
           <div className="flex justify-center items-center w-full">
             <img
               src={logo1}
-              alt="Logo 1"
+              alt="Logo Cruz Negra"
               className="w-10 h-10 md:w-28 md:h-28 mr-2 md:mr-10"
             />
-            <img src={logo2} alt="Logo 2" className="w-8/12" />
+            <img src={logo2} alt="Logo" className="w-8/12" />
           </div>
           <div className="p-0 flex justify-center items-center w-full">
             <p className="text-white text-center font-normal uppercase text-sm md:text-2xl w-full md:w-10/12 md:p-0">

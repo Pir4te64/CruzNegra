@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { useTranslation } from 'react-i18next';
+import { useTranslation } from "react-i18next";
 
 const SectionBellow = () => {
   const { t } = useTranslation();
@@ -15,7 +15,7 @@ const SectionBellow = () => {
 
   return (
     <div className="w-full px-4 py-8 md:pt-5" id="">
-      <div className="max-w-full md:mx-16 grid grid-cols-1 md:grid-cols-2 gap-4">
+      <div className="max-w-2xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12">
         {/* Primer Div */}
         <motion.div
           className="p-4 rounded-lg shadow-md"
@@ -25,7 +25,7 @@ const SectionBellow = () => {
           viewport={{ once: false, amount: 0.3 }}
         >
           <p className="text-white font-bold text-xl md:text-3xl mb-0 md:mb-4">
-            {t('about_company')}
+            {t("about_company")}
           </p>
         </motion.div>
 
@@ -39,7 +39,7 @@ const SectionBellow = () => {
         >
           <div>
             <p className="text-white font-bold text-lg md:text-2xl">
-              {t('driven')}
+              {t("driven")}
             </p>
           </div>
         </motion.div>

@@ -1,6 +1,6 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
-import { useTranslation } from 'react-i18next';
+import { useTranslation } from "react-i18next";
 import "./seccion.css";
 
 const ServiceCard = ({ image, title, description, techStack, direccion }) => {
@@ -10,7 +10,7 @@ const ServiceCard = ({ image, title, description, techStack, direccion }) => {
 
   return (
     <motion.div
-      className="px-0 py-2 sm:px-2 sm:py-8 rounded-lg  flex flex-col justify-center items-center flex-1 min-w-[350px]  "
+      className="px-0 py-1 sm:px-1 sm:py-4 rounded-lg flex flex-col justify-center items-center flex-1 min-w-[220px] max-w-sm w-full"
       ref={cardRef} // Asignamos la referencia
       initial={{ opacity: 0, y: 50 }} // Estado inicial (fuera de vista)
       animate={isInView ? { opacity: 1, y: 0 } : {}} // Se anima solo cuando está visible
@@ -19,7 +19,7 @@ const ServiceCard = ({ image, title, description, techStack, direccion }) => {
     >
       {/* Contenedor de la imagen y el título */}
       <motion.div
-        className={`flex items-center justify-start gap-2 md:gap-6 mb-0 md:mb-5  w-10/12  ${
+        className={`flex items-center justify-start gap-2 md:gap-4 mb-0 md:mb-2 w-11/12 ${
           direccion === "right" ? "flex-row-reverse sm:flex-row" : "flex-row"
         }`}
         initial={{ opacity: 0, x: direccion === "right" ? 50 : -50 }} // Desliza desde un lado dependiendo de la dirección
@@ -28,7 +28,7 @@ const ServiceCard = ({ image, title, description, techStack, direccion }) => {
       >
         {/* Imagen */}
         <motion.div
-          className="w-12 h-12 sm:w-20 sm:h-20 lg:w-20 lg:h-20 flex-shrink-0"
+          className="w-10 h-10 sm:w-14 sm:h-14 lg:w-16 lg:h-16 flex-shrink-0"
           initial={{ scale: 0.8, opacity: 0 }} // Comienza más pequeña y transparente
           animate={isInView ? { scale: 1, opacity: 1 } : {}} // Escala al tamaño completo y se hace visible
           transition={{ duration: 0.8, delay: 0.2 }} // Retraso para sincronizar con el título
@@ -48,7 +48,7 @@ const ServiceCard = ({ image, title, description, techStack, direccion }) => {
           transition={{ duration: 0.8, delay: 0.4 }} // Retraso después de la imagen
         >
           <h3
-            className={`text-base sm:text-xl lg:text-2xl font-bold mb-0 md:mb-2 text-white  ${
+            className={`text-sm sm:text-lg lg:text-xl font-semibold mb-0 md:mb-1 text-white ${
               direccion === "right" ? "text-right sm:text-left" : "text-left"
             }`}
           >
@@ -59,23 +59,23 @@ const ServiceCard = ({ image, title, description, techStack, direccion }) => {
 
       {/* Descripción y TechStack */}
       <motion.div
-        className=" w-10/12 rounded-md flex flex-col justify-between items-center "
+        className="w-11/12 rounded-md flex flex-col justify-between items-center"
         initial={{ opacity: 0, y: 20 }} // Comienza desplazado ligeramente hacia abajo
         animate={isInView ? { opacity: 1, y: 0 } : {}} // Se centra y se hace visible
         transition={{ duration: 0.8, delay: 0.6 }} // Retraso para aparecer después del título
       >
         <div className="mt-5 md:mt-4 mx-0 md:mx-6 flex flex-col justify-center items-center h-auto md:h-[150px]">
-          <p className="text-white text-center font-medium text-sm sm:text-xl  ">
+          <p className="text-white text-center font-normal text-xs sm:text-base">
             {t(description)}
           </p>
         </div>
         <motion.div
-          className="mt-4 bg-white w-full p-1 rounded-b-lg"
+          className="mt-2 bg-white w-full p-0.5 rounded-b-lg"
           initial={{ scale: 0.9, opacity: 0 }}
           animate={isInView ? { scale: 1, opacity: 1 } : {}} // Escala al tamaño completo y se hace visible
           transition={{ duration: 0.8, delay: 0.8 }} // Aparece al final
         >
-          <p className="text-black_cruznegra px-4 text-center font-extrabold text-[9px] sm:text-[10px] md:text-[12px] lg:text-[14px] whitespace-nowrap">
+          <p className="text-black_cruznegra px-2 text-center font-bold text-[9px] sm:text-[10px] md:text-[11px] lg:text-[12px] whitespace-nowrap">
             {t(techStack)}
           </p>
         </motion.div>

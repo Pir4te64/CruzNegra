@@ -1,5 +1,6 @@
+/* Animaciones */
 .img-rotate {
-  transition: transform 0.4s ease-in-out;
+  transition: transform 0.4s ease;
   /* Rotación suave con duración de 0.5 segundos */
 }
 
@@ -8,6 +9,7 @@
   /* Rotación de 180 grados */
 }
 
+/* Enlaces */
 .link-hover-effect {
   position: relative;
   display: inline-block;
@@ -21,17 +23,11 @@
 }
 
 .link-hover-effect:hover {
-  color: white;
-  /* Color del texto al hacer hover */
-  background-color: transparent;
-  /* Fondo transparente */
   border-color: white;
-  /* Borde blanco */
 }
 
+/* Bordes */
 .custom-border {
-  -webkit-border-radius: 30px;
-  -moz-border-radius: 30px;
   border-radius: 30px;
   border: 2px solid rgba(255, 255, 255, 1);
 }
