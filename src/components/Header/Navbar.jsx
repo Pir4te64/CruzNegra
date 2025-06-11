@@ -3,6 +3,7 @@ import HeaderText from "./HeaderText";
 import HeaderImg from "./HeaderImg";
 import LogoComponent from "./Logo";
 import "./Header.css";
+import fondoImg from "/fondocruznegra1.png";
 
 const Navbar = () => {
   const [menuVisible, setMenuVisible] = useState(false);
@@ -10,7 +11,7 @@ const Navbar = () => {
     <div
       id="top"
       className="text-white rounded-[20px] border-2 border-white m-2 p-2 sm:m-3 sm:p-3 md:m-5 md:p-5 min-h-[92vh] flex flex-col justify-center scale-95 relative overflow-hidden bg-transparent bg-cover bg-center bg-no-repeat"
-      style={{ backgroundImage: `url('/fondocruznegra1.png')` }}
+      style={{ backgroundImage: `url(${fondoImg})` }}
     >
       {/* Fondo y logo grande centrado */}
       <HeaderImg />
