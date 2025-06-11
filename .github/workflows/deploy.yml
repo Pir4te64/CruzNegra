@@ -3,7 +3,7 @@ name: Deploy to pro Branch
 on:
   push:
     branches:
-      - main  # Ejecuta el workflow solo cuando hay un push en la rama main.
+      - main # Ejecuta el workflow solo cuando hay un push en la rama main.
 
 jobs:
   deploy:
@@ -14,13 +14,13 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
         with:
-          fetch-depth: 0  # Asegura que se pueda trabajar con múltiples ramas.
+          fetch-depth: 0 # Asegura que se pueda trabajar con múltiples ramas.
 
       # 2. Instalar dependencias y construir el proyecto
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '18'  # Ajusta según la versión de Node.js necesaria.
+          node-version: "20" # Cambiado a 20 para compatibilidad
       - name: Install dependencies and build
         run: |
           npm ci
@@ -45,10 +45,10 @@ jobs:
         run: |
           # Elimina todos los archivos rastreados por Git
           git rm -rf . || true
-          
+
           # Copia el contenido de dist a la raíz
           cp -r dist/* .
-          
+
           # Elimina dist y node_modules
           rm -rf dist node_modules
 
