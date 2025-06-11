@@ -1,5 +1,7 @@
 # Ignorar todo por defecto
 *
 
-# Excluir la carpeta dist
+# Excluir la carpeta dist y src
 !dist/
+!src/
+!src/**

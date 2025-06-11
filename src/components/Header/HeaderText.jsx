@@ -1,5 +1,22 @@
 import { useTranslation } from "react-i18next";
-import { LanguageSwitch } from ".";
+
+const LanguageSwitch = () => {
+  const { i18n } = useTranslation();
+
+  const toggleLanguage = () => {
+    const newLang = i18n.language === "es" ? "en" : "es";
+    i18n.changeLanguage(newLang);
+  };
+
+  return (
+    <button
+      onClick={toggleLanguage}
+      className="px-4 py-2 text-sm rounded-md border-2 border-white text-white hover:bg-white hover:text-black_cruznegra transition-all"
+    >
+      {i18n.language === "es" ? "EN" : "ES"}
+    </button>
+  );
+};
 
 const HeaderText = () => {
   const { t } = useTranslation();
