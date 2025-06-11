@@ -10,5 +10,6 @@ export default defineConfig({
       "@": path.resolve(__dirname, "./src"),
       src: path.resolve(__dirname, "./src"),
     },
+    extensions: [".js", ".jsx", ".json"],
   },
 });
