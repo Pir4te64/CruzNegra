@@ -6,6 +6,7 @@ html {
   scroll-behavior: smooth;
   background-color: #020202;
   font-family: "Aeonik Pro", sans-serif;
+  cursor: default;
 }
 
 @font-face {
@@ -31,6 +32,15 @@ html {
   font-weight: 300;
   font-style: normal;
 }
+
+* {
+  cursor: inherit;
+}
+
+a, button, [role="button"], .cursor-pointer {
+  cursor: pointer !important;
+}
+
 /* Barra de desplazamiento */
 ::-webkit-scrollbar {
   width: 12px; /* Ancho de la barra de desplazamiento */

@@ -5,14 +5,16 @@ import LogoImage from "../../assets/CruzNegra.svg"; // Ruta de tu imagen
 const LogoComponent = ({ onMouseEnter, onMouseLeave, menuVisible }) => {
   return (
     <div
-      className="relative flex items-center justify-start w-1/2 cursor-pointer lg:mx-10 p-2 lg:p-0"
+      className="relative flex items-center justify-start w-1/2 lg:mx-10 p-2 lg:p-0"
       onMouseEnter={onMouseEnter}
       onMouseLeave={onMouseLeave}
+      style={{ cursor: 'pointer' }}
     >
       <img
         src={LogoImage} // URL de tu imagen
         alt="Logo"
         className="img-rotate w-8 h-8 sm:w-12 sm:h-12 m-1" // Más pequeño en móviles
+        style={{ cursor: 'pointer' }}
       />
 
       {/* Menú desplegable en pantallas grandes */}

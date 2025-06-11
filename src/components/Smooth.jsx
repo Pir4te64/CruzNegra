@@ -6,12 +6,32 @@ const SmoothScroll = ({ children }) => {
   useEffect(() => {
     const scroll = new LocomotiveScroll({
       el: document.querySelector("[data-scroll-container]"),
-      smooth: true, // Habilita el scroll suave
-      smoothMobile: true, // Opcional para móviles
-      inertia: 0.9, // Controla la inercia del movimiento (0.1 a 1)
+      smooth: true,
+      smoothMobile: true,
+      inertia: 0.9,
+      multiplier: 1,
+      lerp: 0.1,
+      smartphone: {
+        smooth: true,
+        multiplier: 1
+      },
+      tablet: {
+        smooth: true,
+        multiplier: 1
+      }
     });
 
-    return () => scroll.destroy();
+    // Asegurarse de que el cursor se mantenga visible
+    const handleMouseMove = () => {
+      document.body.style.cursor = 'default';
+    };
+
+    window.addEventListener('mousemove', handleMouseMove);
+
+    return () => {
+      scroll.destroy();
+      window.removeEventListener('mousemove', handleMouseMove);
+    };
   }, []);
 
   return (
