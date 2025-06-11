@@ -2,19 +2,16 @@ import { useState } from "react";
 import HeaderText from "./HeaderText";
 import HeaderImg from "./HeaderImg";
 import LogoComponent from "./Logo";
-import Spline from '@splinetool/react-spline';
 import "./Header.css";
+
 const Navbar = () => {
   const [menuVisible, setMenuVisible] = useState(false);
   return (
     <div
       id="top"
-      className="text-white rounded-[20px] border-2 border-white m-2 p-2 sm:m-3 sm:p-3 md:m-5 md:p-5 bg-header min-h-[92vh] flex flex-col justify-center scale-95 relative overflow-hidden"
+      className="text-white rounded-[20px] border-2 border-white m-2 p-2 sm:m-3 sm:p-3 md:m-5 md:p-5 min-h-[92vh] flex flex-col justify-center scale-95 relative overflow-hidden bg-transparent bg-cover bg-center bg-no-repeat"
+      style={{ backgroundImage: `url('/fondocruznegra.jpeg')` }}
     >
-      {/* Fondo Spline absoluto */}
-      <div className="absolute inset-0 w-full h-full z-0">
-        <Spline scene="https://prod.spline.design/H9fXknZZbUdBDpU0/scene.splinecode" style={{ width: '100%', height: '100%' }} />
-      </div>
       {/* Fondo y logo grande centrado */}
       <HeaderImg />
       {/* Main Container superpuesto */}
