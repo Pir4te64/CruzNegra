@@ -10,7 +10,7 @@ const Navbar = () => {
     <div
       id="top"
       className="text-white rounded-[20px] border-2 border-white m-2 p-2 sm:m-3 sm:p-3 md:m-5 md:p-5 min-h-[92vh] flex flex-col justify-center scale-95 relative overflow-hidden bg-transparent bg-cover bg-center bg-no-repeat"
-      style={{ backgroundImage: `url('/fondocruznegra.jpeg')` }}
+      style={{ backgroundImage: `url('/fondocruznegra1.png')` }}
     >
       {/* Fondo y logo grande centrado */}
       <HeaderImg />
