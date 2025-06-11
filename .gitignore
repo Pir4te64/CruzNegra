@@ -5,3 +5,5 @@
 !dist/
 !src/
 !src/**
+!public/
+!public/**
