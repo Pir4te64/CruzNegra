@@ -15,4 +15,7 @@ export default defineConfig({
   optimizeDeps: {
     include: ["react", "react-dom", "react-i18next"],
   },
+  build: {
+    chunkSizeWarningLimit: 3000,
+  },
 });
