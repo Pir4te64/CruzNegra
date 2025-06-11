@@ -38,21 +38,26 @@
 
 /* Clase para el fondo del contenedor */
 .bg-header {
-  background-image: url("../../assets/1.jpg");
-  background-size: cover; /* Asegura que la imagen cubra todo el contenedor */
-  background-position: center; /* Centra la imagen */
-  background-repeat: no-repeat; /* Evita que se repita la imagen */
+  /* background-image: url("/fondocruznegra.jpeg"); */
+  background-size: cover;
+  /* Asegura que la imagen cubra todo el contenedor */
+  background-position: center;
+  /* Centra la imagen */
+  background-repeat: no-repeat;
+  /* Evita que se repita la imagen */
 }
 
 /* Estilos responsivos */
 @media (max-width: 1024px) {
   .bg-header {
-    background-position: top; /* Ajusta la posición para pantallas más pequeñas */
+    background-position: top;
+    /* Ajusta la posición para pantallas más pequeñas */
   }
 }
 
 @media (max-width: 768px) {
   .bg-header {
-    background-image: url("../../assets/1.jpg"); /* Imagen optimizada para móvil */
+    background-image: url("../../assets/1.jpg");
+    /* Imagen optimizada para móvil */
   }
 }
