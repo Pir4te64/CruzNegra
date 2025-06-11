@@ -1,8 +1,10 @@
 import { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import Swal from "sweetalert2";
+import { useTranslation } from 'react-i18next';
 
 const Formulario = () => {
+  const { t } = useTranslation();
   const formRef = useRef();
   const [isLoading, setIsLoading] = useState(false);
 
@@ -20,9 +22,9 @@ const Formulario = () => {
         (result) => {
           Swal.fire({
             icon: "success",
-            title: "¡Email enviado!",
-            text: "Tu mensaje se ha enviado correctamente.",
-            confirmButtonText: "OK",
+            title: t('form_success_title'),
+            text: t('form_success_text'),
+            confirmButtonText: t('form_success_ok'),
           });
           formRef.current.reset(); // Limpia el formulario después del envío.
         },
@@ -30,9 +32,9 @@ const Formulario = () => {
           console.error("Error al enviar el correo:", error);
           Swal.fire({
             icon: "error",
-            title: "Error",
-            text: "Hubo un problema al enviar tu mensaje. Por favor, inténtalo de nuevo.",
-            confirmButtonText: "Cerrar",
+            title: t('form_error_title'),
+            text: t('form_error_text'),
+            confirmButtonText: t('form_error_ok'),
           });
         }
       )
@@ -48,40 +50,40 @@ const Formulario = () => {
     >
       <div className="mb-4">
         <label htmlFor="name" className="block text-sm font-medium mb-2">
-          Name
+          {t('name_label')}
         </label>
         <input
           type="text"
           id="name"
           name="name"
           className="w-full px-4 py-2 rounded-md border border-gray-600 bg-black_cruznegra focus:ring-2 focus:ring-blue-500 focus:outline-none"
-          placeholder="Your name"
+          placeholder={t('name_placeholder')}
           required
         />
       </div>
       <div className="mb-4">
         <label htmlFor="email" className="block text-sm font-medium mb-2">
-          Email
+          {t('email_label')}
         </label>
         <input
           type="email"
           id="email"
           name="email"
           className="w-full px-4 py-2 rounded-md  border border-gray-600 bg-black_cruznegra focus:ring-2 focus:ring-blue-500 focus:outline-none"
-          placeholder="Your Email"
+          placeholder={t('email_placeholder')}
           required
         />
       </div>
       <div className="mb-4">
         <label htmlFor="message" className="block text-sm font-medium mb-2">
-          Message
+          {t('message_label')}
         </label>
         <textarea
           id="message"
           name="message"
           className="w-full px-4 py-2 rounded-md bg-black_cruznegra border border-gray-600 focus:ring-2 focus:ring-white focus:outline-none"
           rows="4"
-          placeholder="Type your Message"
+          placeholder={t('message_placeholder')}
           required
           maxLength={200}
         ></textarea>
@@ -96,7 +98,7 @@ const Formulario = () => {
         }`}
         disabled={isLoading}
       >
-        {isLoading ? "Sending, wait..." : "Submit"}
+        {isLoading ? t('sending') : t('submit')}
       </button>
     </form>
   );

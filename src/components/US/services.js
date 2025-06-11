@@ -10,66 +10,58 @@ import s8 from "../../assets/iconsServices/Services-8.svg";
 export const services = [
   {
     image: s1,
-    title: "Custom Website Development for Businesses",
-    description:
-      "Transform your online presence with bespoke websites tailored to your needs. Informative websites, e-commerce platforms, client portals, corporate blogs.",
-    techStack: "HTML ⋅ CSS ⋅ JavaScript ⋅ Node.js ⋅ PHP ",
+    title: "service1_title",
+    description: "service1_desc",
+    techStack: "service1_tech",
     direccion: "left",
   },
   {
     image: s2,
-    title: "Customer Relationship Management (CRM) Solutions",
-    description:
-      "Streamline customer interactions with custom CRM systems or integrations. Client management, sales tracking, and marketing automation.",
-    techStack: "Salesforce ⋅ HubSpot ⋅ Zoho CRM",
+    title: "service2_title",
+    description: "service2_desc",
+    techStack: "service2_tech",
     direccion: "right",
   },
   {
     image: s3,
-    title: "Enterprise Resource Planning (ERP) Systems",
-    description:
-      "Enhance your business operations with ERP solutions tailored to your workflow. Accounting, inventory management, procurement, sales, and HR.",
-    techStack: "Deploy SAP ⋅ Odoo ⋅ Oracle ERP ⋅ Custom modules",
+    title: "service3_title",
+    description: "service3_desc",
+    techStack: "service3_tech",
     direccion: "left",
   },
   {
     image: s4,
-    title: "Mobile App Development",
-    description:
-      "Bring your ideas to life with high-performing mobile apps for all platforms. E-commerce apps, delivery services, and corporate tools.",
-    techStack: "Android, iOS, Flutter, React Native.",
+    title: "service4_title",
+    description: "service4_desc",
+    techStack: "service4_tech",
     direccion: "right",
   },
   {
     image: s5,
-    title: "E-Learning and Educational Management Systems",
-    description:
-      "Create engaging platforms for education and learning management. Course management, progress tracking, and certifications.",
-    techStack: "LMS platforms like Moodle, or custom-built solutions.",
+    title: "service5_title",
+    description: "service5_desc",
+    techStack: "service5_tech",
     direccion: "left",
   },
   {
     image: s6,
-    title: "API Integration and Third-Party Solutions",
-    description:
-      "Expand functionality by seamlessly connecting your system to other platforms.",
-    techStack: "PayPal ⋅ Stripe ⋅ Social Media ⋅ CRM/ERP",
+    title: "service6_title",
+    description: "service6_desc",
+    techStack: "service6_tech",
     direccion: "right",
   },
   {
     image: s7,
-    title: "E-Commerce Solutions",
-    description:
-      "Launch and scale your online store with powerful e-commerce platforms. Inventory management, payment gateways, and mobile optimization.",
-    techStack: "Shopify ⋅ WooCommerce ⋅ Fully custom-built solutions",
+    title: "service7_title",
+    description: "service7_desc",
+    techStack: "service7_tech",
     direccion: "left",
   },
   {
     image: s8,
-    title: "SaaS Application Development",
-    description:
-      "Design and deploy cloud-based platforms tailored to your industry. SaaS solutions for healthcare, education, or finance sectors.",
-    techStack: "Scalable, secure, and built for user-centric performance.",
+    title: "service8_title",
+    description: "service8_desc",
+    techStack: "service8_tech",
     direccion: "right",
   },
 ];

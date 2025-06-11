@@ -1,6 +1,8 @@
 import { motion } from "framer-motion";
+import { useTranslation } from 'react-i18next';
 
 const SectionBellow = () => {
+  const { t } = useTranslation();
   const leftVariants = {
     hidden: { opacity: 0, x: -100 },
     visible: { opacity: 1, x: 0, transition: { duration: 0.8 } },
@@ -23,10 +25,7 @@ const SectionBellow = () => {
           viewport={{ once: false, amount: 0.3 }}
         >
           <p className="text-white font-bold text-xl md:text-3xl mb-0 md:mb-4">
-            We are a forward-thinking company specializing in custom software
-            development. Our multidisciplinary team excels in technologies like
-            React, Node.js, Python, Django, and more, delivering tailored
-            digital solutions.
+            {t('about_company')}
           </p>
         </motion.div>
 
@@ -40,8 +39,7 @@ const SectionBellow = () => {
         >
           <div>
             <p className="text-white font-bold text-lg md:text-2xl">
-              We are driven by passion, ethics, and commitment, prioritizing
-              continuous innovation and personalized attention.
+              {t('driven')}
             </p>
           </div>
         </motion.div>

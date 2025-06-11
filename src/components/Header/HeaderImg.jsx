@@ -4,11 +4,11 @@ import { ReactTyped } from "react-typed"; // Importamos la librería react-typed
 
 const HeaderImg = () => {
   return (
-    <div className="relative w-full h-[540px]">
-      {/* Contenedor de logos */}
-      <div className="absolute inset-0 flex justify-center items-center flex-col p-3">
+    <div className="relative w-full h-full min-h-inherit flex items-center justify-center">
+      {/* Contenedor de logos y texto */}
+      <div className="flex flex-col items-center justify-center w-full h-full p-3 z-10">
         <div className="w-full md:w-8/12 justify-center ">
-          <div className="flex justify-center items-center ">
+          <div className="flex justify-center items-center w-full ">
             <img
               src={logo1}
               alt="Logo 1"
@@ -20,16 +20,11 @@ const HeaderImg = () => {
               className="w-8/12 " // Logo 2 responsivo
             />
           </div>
-          <div className=" p-0  justify-center flex items-center">
-            <p className="text-white text-end font-normal uppercase text-sm md:text-2xl w-full md:w-10/12 pr-8  md:p-0 md:pr-5">
-              <ReactTyped
-                strings={["Think. Code. Evolve."]} // Las frases que cambiarán
-                typeSpeed={100} // Velocidad al escribir
-                backSpeed={100} // Velocidad al borrar
-                backDelay={1000} // Tiempo antes de empezar a borrar
-                startDelay={500} // Tiempo antes de empezar a escribir
-                loop // Hace que las frases se repitan
-              />
+          <div className="p-0 flex justify-center items-center w-full">
+            <p className="text-white text-center font-normal uppercase text-sm md:text-2xl w-full md:w-10/12 md:p-0">
+            
+                Think. Code. Evolve.
+              
             </p>
           </div>
         </div>

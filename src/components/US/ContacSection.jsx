@@ -1,7 +1,9 @@
 import { motion } from "framer-motion";
 import section from "../../assets/3.jpg";
+import { useTranslation } from 'react-i18next';
 
 const ContacSection = () => {
+  const { t } = useTranslation();
   const textVariants = {
     hidden: { opacity: 0, y: 50 },
     visible: { opacity: 1, y: 0, transition: { duration: 1, ease: "easeOut" } },
@@ -25,17 +27,17 @@ const ContacSection = () => {
         viewport={{ once: true, amount: 0.3 }}
       >
         <h1 className="text-xl md:text-4xl font-bold mb-0 md:mb-6">
-          You deserve the success
+          {t('contact_title')}
         </h1>
         <p className="text-md md:text-xl my-1 mb-5 md:mb-8">
-          Let us help you achieve it.
+          {t('contact_subtitle')}
         </p>
         <a
           href="#form"
           type="button"
           className="bg-white text-black_cruznegra px-6 py-3 text-sm rounded-md border-2 border-transparent hover:bg-transparent hover:text-white hover:border-white transition-all"
         >
-          Let's Talk
+          {t('lets_talk')}
         </a>
       </motion.div>
     </div>

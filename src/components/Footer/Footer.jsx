@@ -1,32 +1,42 @@
 import React from "react";
 import cruznegra from "../../assets/CruzNegra.svg";
 import Formulario from "./Formulario";
+import Spline from '@splinetool/react-spline';
+import { useTranslation } from 'react-i18next';
+
 const Footer = () => {
+  const { t } = useTranslation();
   return (
     <footer id="contact" className="z-50">
       <div className="w-full px-4 py-4 md:pt-5 " id="footer">
         <div className="max-w-full md:mx-16 grid grid-cols-1 md:grid-cols-2 gap-4 justify-center items-center">
-          {/* Primer Div */}
-          <div className="p-4 ">
-            <p className="text-white font-bold text-xl md:text-3xl mb-0 md:mb-4">
-              Let's talk about the impact you’d like to make and blow your
-              audience's collective mind.
-            </p>
-            <div className="pt-5 md:pt-0 rounded-lg shadow-md flex flex-col justify-between">
-              <div>
-                <ul className="space-y-10">
-                  <li>
-                    <a
-                      href="mailto:contact@cruznegra.com"
-                      className="text-white underline"
-                    >
-                      management@cruznegradev.com
-                    </a>
-                  </li>
-                </ul>
+          {/* Columna Izquierda */}
+          <div className="flex flex-col">
+            <div className="p-4">
+              <p className="text-white font-bold text-xl md:text-3xl mb-0 md:mb-4">
+                {t('footer_impact')}
+              </p>
+              <div className="pt-5 md:pt-0 rounded-lg shadow-md flex flex-col justify-between">
+                <div>
+                  <ul className="space-y-10">
+                    <li>
+                      <a
+                        href="mailto:contact@cruznegra.com"
+                        className="text-white underline"
+                      >
+                        management@cruznegradev.com
+                      </a>
+                    </li>
+                  </ul>
+                </div>
               </div>
             </div>
+            {/* Spline Keyboard */}
+            <div className="h-[300px] md:h-[400px] w-full">
+              <Spline scene="https://prod.spline.design/hcgdSPnwmjPl4fxO/scene.splinecode" />
+            </div>
           </div>
+          {/* Formulario */}
           <div className="flex items-center justify-center h-auto md:min-h-screen">
             <Formulario />
           </div>
@@ -65,7 +75,7 @@ const Footer = () => {
           {/* Línea divisoria y texto */}
           <div className="border-t border-white py-4">
             <p className="text-center text-white md:text-xl text-sm">
-              © 2024 CruzNegra. All rights reserved.
+              © 2024 CruzNegra. {t('footer_rights')}
             </p>
           </div>
         </div>

@@ -1,10 +1,12 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
+import { useTranslation } from 'react-i18next';
 import "./seccion.css";
 
 const ServiceCard = ({ image, title, description, techStack, direccion }) => {
   const cardRef = useRef(null); // Referencia para detectar si está en el viewport
   const isInView = useInView(cardRef, { once: true, amount: 0.3 }); // `once: true` para animar solo la primera vez
+  const { t } = useTranslation();
 
   return (
     <motion.div
@@ -33,7 +35,7 @@ const ServiceCard = ({ image, title, description, techStack, direccion }) => {
         >
           <img
             src={image}
-            alt={title}
+            alt={t(title)}
             className="w-full  md:h-full object-contain "
           />
         </motion.div>
@@ -50,7 +52,7 @@ const ServiceCard = ({ image, title, description, techStack, direccion }) => {
               direccion === "right" ? "text-right sm:text-left" : "text-left"
             }`}
           >
-            {title}
+            {t(title)}
           </h3>
         </motion.div>
       </motion.div>
@@ -64,7 +66,7 @@ const ServiceCard = ({ image, title, description, techStack, direccion }) => {
       >
         <div className="mt-5 md:mt-4 mx-0 md:mx-6 flex flex-col justify-center items-center h-auto md:h-[150px]">
           <p className="text-white text-center font-medium text-sm sm:text-xl  ">
-            {description}
+            {t(description)}
           </p>
         </div>
         <motion.div
@@ -74,7 +76,7 @@ const ServiceCard = ({ image, title, description, techStack, direccion }) => {
           transition={{ duration: 0.8, delay: 0.8 }} // Aparece al final
         >
           <p className="text-black_cruznegra px-4 text-center font-extrabold text-[9px] sm:text-[10px] md:text-[12px] lg:text-[14px] whitespace-nowrap">
-            {techStack}
+            {t(techStack)}
           </p>
         </motion.div>
       </motion.div>
