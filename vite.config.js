@@ -10,6 +10,9 @@ export default defineConfig({
       "@": path.resolve(__dirname, "./src"),
       src: path.resolve(__dirname, "./src"),
     },
-    extensions: [".js", ".jsx", ".json"],
+    extensions: [".js", ".jsx", ".json", ".mjs"],
+  },
+  optimizeDeps: {
+    include: ["react", "react-dom", "react-i18next"],
   },
 });

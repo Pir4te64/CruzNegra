@@ -1,5 +1,5 @@
 import { useTranslation } from "react-i18next";
-import LanguageSwitch from "./LanguageSwitch.jsx";
+import { LanguageSwitch } from ".";
 
 const HeaderText = () => {
   const { t } = useTranslation();
