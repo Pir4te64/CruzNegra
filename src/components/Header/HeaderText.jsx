@@ -23,14 +23,13 @@ const HeaderText = () => {
 
   return (
     <div className="lg:text-left lg:m-0 m-2 md:m-5">
-      <div className="flex items-center justify-between gap-4">
-        <h1 className="text-md font-normal mb-4 leading-5 lg:text-2xl lg:font-bold lg:leading-tight">
+      <div className="flex flex-col items-center gap-2 lg:flex-row lg:items-center lg:justify-between lg:gap-4">
+        <h1 className="text-md font-normal mb-2 leading-5 lg:text-2xl lg:font-bold lg:leading-tight">
           {t("header_text")}
         </h1>
         <LanguageSwitch />
       </div>
       <div className="text-center lg:text-left items-center lg:items-start flex justify-center lg:justify-start mt-4">
-        {/* Contenedor para alinear el botón */}
         <a
           href="#form"
           type="button"
