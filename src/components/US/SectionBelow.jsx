@@ -24,9 +24,9 @@ const SectionBellow = () => {
           whileInView="visible"
           viewport={{ once: false, amount: 0.3 }}
         >
-          <p className="text-white font-bold text-xl md:text-3xl mb-0 md:mb-4">
+          {/* <p className="text-white font-bold text-xl md:text-3xl mb-0 md:mb-4">
             {t("about_company")}
-          </p>
+          </p> */}
         </motion.div>
 
         {/* Segundo Div */}

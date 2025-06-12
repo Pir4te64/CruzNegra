@@ -10,15 +10,15 @@ const SectionUs = () => {
   return (
     <div className="w-full px-4 py-4" ref={sectionRef}>
       <div
-        className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-24 items-end"
+        className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16 items-center"
         data-scroll-section
         data-scroll-call="section"
         id="about"
       >
         {/* Primer Div */}
-        <div className="p-4 rounded-lg shadow-md flex flex-col justify-center">
+        <div className="p-4 rounded-lg shadow-md flex flex-col justify-center items-center md:items-end text-center md:text-right">
           <motion.p
-            className="text-white font-bold text-lg md:text-xl mb-3"
+            className="text-white font-bold text-xl md:text-2xl mb-4"
             initial={{ opacity: 0, y: 50 }}
             animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
             transition={{ duration: 0.8 }}
@@ -26,7 +26,7 @@ const SectionUs = () => {
             {t("philosophy")}
           </motion.p>
           <motion.div
-            className="flex flex-wrap gap-4"
+            className="flex flex-wrap gap-4 justify-center md:justify-end w-full"
             initial={{ opacity: 0, y: 50 }}
             animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
             transition={{ duration: 0.8, delay: 0.4 }}
@@ -34,7 +34,7 @@ const SectionUs = () => {
             {[t("innovate"), t("code"), t("transform")].map((text) => (
               <motion.button
                 key={text}
-                className="px-6 py-2 text-white border-t border-l border-r border-white rounded-t-lg bg-transparent"
+                className="min-w-[120px] px-6 py-2 text-white border-t border-l border-r border-white rounded-t-lg bg-transparent text-base md:text-lg"
                 whileHover={{
                   scale: 1.1,
                   backgroundColor: "rgba(255, 255, 255, 0.1)",
@@ -48,22 +48,22 @@ const SectionUs = () => {
         </div>
 
         {/* Segundo Div */}
-        <div className="p-4 rounded-lg shadow-md flex flex-col justify-center">
+        <div className="p-4 rounded-lg shadow-md flex flex-col justify-center items-center md:items-start text-center md:text-left">
           <motion.div
             className="space-y-2"
             initial={{ opacity: 0, y: 50 }}
             animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
             transition={{ duration: 0.8 }}
           >
-            <p className="text-white font-bold text-base md:text-lg">
+            <p className="text-white font-bold text-xl md:text-2xl">
               {t("driven")}
             </p>
-            <p className="text-white font-normal text-sm md:text-base py-1">
+            <p className="text-white font-normal text-base md:text-lg py-1">
               {t("goal")}
             </p>
           </motion.div>
           <motion.div
-            className="flex justify-start"
+            className="flex justify-center md:justify-start w-full mt-4"
             initial={{ opacity: 0, y: 50 }}
             animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
             transition={{ duration: 0.8, delay: 0.4 }}
@@ -71,7 +71,7 @@ const SectionUs = () => {
             <motion.a
               type="button"
               href="#form"
-              className="bg-white text-black_cruznegra px-3 py-1 text-xs rounded-md border-2 border-transparent hover:bg-transparent hover:text-white hover:border-white transition-all"
+              className="bg-white text-black_cruznegra px-6 py-2 text-base rounded-md border-2 border-transparent hover:bg-transparent hover:text-white hover:border-white transition-all font-semibold"
               whileHover={{
                 scale: 1.1,
               }}

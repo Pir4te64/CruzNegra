@@ -50,5 +50,21 @@
   "form_success_ok": "OK",
   "form_error_title": "Error",
   "form_error_text": "There was a problem sending your message. Please try again.",
-  "form_error_ok": "Close"
+  "form_error_ok": "Close",
+  "logistics_argentina_title": "Logistics Argentina",
+  "logistics_argentina_desc": "We developed a Web App to connect carriers with logistics companies.",
+  "logistics_argentina_tag1": "WebApp",
+  "logistics_argentina_tag2": "API",
+  "logistics_argentina_tag3": "Cloud",
+  "voi_title": "VOI",
+  "voi_desc": "Ticket sales platform for events.",
+  "voi_tag1": "WebApp",
+  "voi_tag2": "Payment",
+  "voi_tag3": "Cloud",
+  "norglass_title": "Norglass",
+  "norglass_desc": "We worked with Norglass, a company dedicated to glass distribution.",
+  "norglass_tag1": "Web",
+  "norglass_tag2": "Design",
+  "norglass_tag3": "Automation",
+  "projects_section_title": "Projects"
 } 

@@ -15,10 +15,10 @@ function App() {
       <Navbar />
       <SectionUs />
       <ServicesSection />
-      {/* <Projects /> */}
+      <Projects />
       <SectionBellow />
       <ContacSection />
-      {/* <Clients /> */}
+      <Clients />
       <Footer />
       <ScrollToTopButton />
     </SmoothScroll>
