@@ -1,4 +1,4 @@
-import Clients from "./components/Clients/Clients";
+// import Clients from "./components/Clients/Clients";
 import Footer from "./components/Footer/Footer";
 import Navbar from "./components/Header/Navbar";
 import ContacSection from "./components/US/ContacSection";
@@ -18,7 +18,7 @@ function App() {
       <Projects />
       <SectionBellow />
       <ContacSection />
-      <Clients />
+      {/* <Clients /> */}
       <Footer />
       <ScrollToTopButton />
     </SmoothScroll>
